@@ -5,22 +5,22 @@
 "
 " Thanks to Eric N. Vander Weele and Shawn Biddle for the inspiration :)
 
-call pathogen#infect("bundle/{}")
+"call pathogen#infect("bundle/{}")
 
 if has("unix")
   let s:uname = system("uname")
   if s:uname == "AIX\n"
-    call pathogen#infect("bundle_aix/{}")
+"    call pathogen#infect("bundle_aix/{}")
   endif
   if s:uname == "SunOS\n"
-    call pathogen#infect("bundle_sunos/{}")
+"    call pathogen#infect("bundle_sunos/{}")
   endif
   if s:uname == "Linux\n"
-    call pathogen#infect("bundle_linux/{}")
+"    call pathogen#infect("bundle_linux/{}")
   endif
 endif
 
-call pathogen#helptags()
+"call pathogen#helptags()
 
 "Filetype stuff
 filetype plugin on
