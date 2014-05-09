@@ -1,0 +1,7 @@
+bundle/*
+backup/*
+non_used/*
+tmp/*
+undo/*
+.netrwhist
+.VimballRecord

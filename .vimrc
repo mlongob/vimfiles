@@ -6,7 +6,6 @@
 " Thanks to Eric N. Vander Weele and Shawn Biddle for the inspiration :)
 
 "call pathogen#infect("bundle/{}")
-
 if has("unix")
   let s:uname = system("uname")
   if s:uname == "AIX\n"
@@ -21,10 +20,7 @@ if has("unix")
 endif
 
 "call pathogen#helptags()
-
-"Filetype stuff
-filetype plugin on
-filetype indent on
+source ~/.vim/startup/plugins.vim
 
 " Nerdtree stuff
 "let NERDTreeMinimalUI=1
@@ -38,7 +34,5 @@ source ~/.vim/startup/functions.vim
 source ~/.vim/startup/mappings.vim
 source ~/.vim/startup/settings.vim
 
-
 " CTAGS includes
 "source /bbsrc/princeton/skunk/vim/cursor.vim
-
