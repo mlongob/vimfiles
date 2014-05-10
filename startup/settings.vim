@@ -1,7 +1,7 @@
 "General Settings
 
 """ 1 important
-set nocompatible
+let g:platform = GetPlatform()
 set pastetoggle=<F2>
 
 "" 2 moving around, searching and patterns
@@ -33,8 +33,7 @@ set splitright
 set showtabline=1
 
 "" 8 terminal
-let s:uname = system("uname")
-if !has('win32') && !has('win64') && s:uname != "AIX\n"
+if g:platform != "AIX" && g:platform != "Windows"
   set term=$TERM
 endif
 
@@ -113,13 +112,10 @@ set gdefault
 set enc=utf-8
 set fillchars+=stl:\ ,stlnc:\
 set laststatus=2
-"let g:Powerline_symbols = 'fancy'
-"call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
 
 " YouCompleteMe
-let g:ycm_confirm_extra_conf = 0
-let g:ycm_global_ycm_extra_conf = "~/.vim/config/.ycm_extra_conf.py"
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:syntastic_always_populate_loc_list = 1
+"let g:ycm_global_ycm_extra_conf = "~/.vim/config/.ycm_extra_conf.py"
+"let g:ycm_autoclose_preview_window_after_insertion = 1
+"let g:syntastic_always_populate_loc_list = 1
 
-let g:UltiSnipsExpandTrigger = "<c-j>"
+"let g:UltiSnipsExpandTrigger = "<c-j>"
