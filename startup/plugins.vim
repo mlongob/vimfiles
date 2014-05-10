@@ -1,3 +1,5 @@
+" Plugins and plugin configuration
+
 set nocompatible
 filetype off
 
@@ -56,10 +58,6 @@ if g:platform == "Linux"
     " Nice airline-like bash prompt
     Plugin 'edkolev/promptline.vim'
 endif
-
-"Plugin ''
-"Plugin ''
-"Plugin ''
 
 call vundle#end()
 filetype plugin indent on

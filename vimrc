@@ -6,9 +6,6 @@
 " Thanks to Eric N. Vander Weele and Shawn Biddle for the inspiration :)
 "
 
-" Be IMproved
-set nocompatible
-
 "Load custom settings from separate files
 source ~/.vim/startup/functions.vim " User defined functions
 source ~/.vim/startup/commands.vim  " User defined commands

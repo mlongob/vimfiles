@@ -1,5 +1,8 @@
 " Mappings
 
+" Toggle paste mode
+set pastetoggle=<F2>
+
 "Kill the arrow keys to force practice with hjkl
 no <up> <Nop>
 no <down> <Nop>
