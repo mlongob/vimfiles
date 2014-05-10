@@ -5,3 +5,7 @@ tmp/*
 undo/*
 .netrwhist
 .VimballRecord
+*.swp
+*.out
+*.log
+*~
