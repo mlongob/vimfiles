@@ -22,9 +22,6 @@ set list
 set listchars=tab:>-,trail:-
 set number
 
-"" 5 syntax, highlighting and spelling
-syntax on
-
 "" 6 multiple windows
 set equalalways
 set winheight=3
@@ -126,4 +123,3 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:syntastic_always_populate_loc_list = 1
 
 let g:UltiSnipsExpandTrigger = "<c-j>"
-

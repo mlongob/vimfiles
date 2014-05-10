@@ -27,23 +27,10 @@ nn <Leader>h :tabnew %:h<CR>
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>em :vsplit ~/.vim/startup/mappings.vim<cr>
 nnoremap <leader>es :vsplit ~/.vim/startup/settings.vim<cr>
+nnoremap <leader>ep :vsplit ~/.vim/startup/plugins.vim<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>sm :source ~/.vim/startup/mappings.vim<cr>
 nnoremap <leader>ss :source ~/.vim/startup/settings.vim<cr>
-
-" For scrolling in xterm
-"map <xCSI>[62~ <MouseDown>
-"map! <xCSI>[62~ <MouseDown>
-"map <xCSI>[63~ <MouseUp>
-"map! <xCSI>[63~ <MouseUp>
-"map <xCSI>[64~ <S-MouseDown>
-"map! <xCSI>[64~ <S-MouseDown>
-"map <xCSI>[65~ <S-MouseUp>
-"map! <xCSI>[65~ <S-MouseUp>
-"map <MouseDown> 3<C-Y>
-"map <S-MouseDown> <C-U>
-"map <MouseUp> 3<C-E>
-"map <S-MouseUp> <C-D>
 
 " toggle hlsearch
 nmap <silent> <F4> :set nohlsearch!<CR>
