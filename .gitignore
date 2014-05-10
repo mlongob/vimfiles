@@ -3,9 +3,11 @@ backup/*
 non_used/*
 tmp/*
 undo/*
+tags/*
 .netrwhist
 .VimballRecord
 *.swp
 *.out
 *.log
+*.pyc
 *~
