@@ -114,6 +114,8 @@ if g:platform == "Linux"
 
     " Nice airline-like bash prompt
     Plugin 'edkolev/promptline.vim'
+    let g:promptline_theme = 'airline'
+
 endif
 
 "" Stuff I want to try
@@ -125,6 +127,16 @@ endif
 
 call vundle#end()
 filetype plugin indent on
+
+" Configure Promptline Preset
+if g:platform == "Linux"
+    let g:promptline_preset = {
+        \'a' : [ promptline#slices#host() ],
+        \'b' : [ promptline#slices#user() ],
+        \'c' : [ promptline#slices#vcs_branch(), promptline#slices#cwd() ],
+        \'warn' : [ promptline#slices#last_exit_code() ]}
+endif
+
 " Brief help
 " :PluginList          - list configured plugins
 " :PluginInstall(!)    - install (update) plugins
