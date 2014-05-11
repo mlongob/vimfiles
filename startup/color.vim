@@ -1,3 +1,6 @@
 " Color scheme configuration
-syntax on
-color jellybeans
+
+" For solarized
+let g:solarized_termcolors=256
+syntax enable
+colorscheme jellybeans

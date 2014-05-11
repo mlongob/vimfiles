@@ -17,3 +17,5 @@ autocmd FileType make setlocal noexpandtab shiftwidth=8
 " xsd files
 autocmd FileType xsd,xml set textwidth=0
 
+" Open NERDTree when no files are specified
+autocmd vimenter * if !argc() | NERDTree | endif

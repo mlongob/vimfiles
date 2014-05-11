@@ -1,5 +1,6 @@
 bundle/*
 backup/*
+config/*
 non_used/*
 tmp/*
 undo/*
