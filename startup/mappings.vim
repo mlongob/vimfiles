@@ -45,7 +45,7 @@ nnoremap <F7> :call ToggleSyntax()<CR>
 
 " YouCompleteMe mappings
 nnoremap <F12> :YcmForceCompileAndDiagnostics<CR>
-nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <leader>jd :YcmCompleter GoTo<CR>
 
 "Buffer exploration
 nnoremap <F10> :buffers<CR>:buffer<Space>

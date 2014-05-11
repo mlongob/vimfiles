@@ -79,13 +79,13 @@ set cinoptions=:0.5s,=0.5s,l1,g0.5s,h0.5s,t0,i0,(0
 "              |     |     +-- align with case label instead of statement
 "              |     +-- place statements after case label
 "              +-- placement of case after switch statement
-
-"" folding
 set indentkeys-=0#            " do not break indent on #
 set cinkeys-=0#
 set cinoptions=:s,ps,ts,cs
 set cinwords=if,else,while,do
 set cinwords+=for,switch,case
+"
+"" folding
 set nofoldenable
 set foldmarker={,}
 set foldmethod=syntax
