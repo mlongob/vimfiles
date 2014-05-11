@@ -1,8 +1,5 @@
 " Mappings
 
-" Toggle paste mode
-set pastetoggle=<F2>
-
 "Kill the arrow keys to force practice with hjkl
 no <up> <Nop>
 no <down> <Nop>
@@ -15,6 +12,31 @@ ino <right> <Nop>
 
 " Map jk to ESC for easy hand-positioning
 ino jk <esc>
+
+
+"" F-Keys Mapping
+" Toggle paste mode
+set pastetoggle=<F2>
+
+" toggle hlsearch
+nmap <silent> <F4> :set nohlsearch!<CR>
+imap <silent> <F4> <c-o>:set nohlsearch!<CR>
+
+" Toggle Gundlo
+nnoremap <F5> :GundoToggle<CR>
+
+" Switch between conventional/relative numbering
+nnoremap <F6> :call ToggleNumbering()<CR>
+
+" Toggle Syintax Highlighting
+nnoremap <F7> :call ToggleSyntax()<CR>
+
+"Buffer exploration
+nnoremap <F10> :buffers<CR>:buffer<Space>
+
+" YouCompleteMe mappings
+nnoremap <F12> :YcmForceCompileAndDiagnostics<CR>
+nnoremap <leader>jd :YcmCompleter GoTo<CR>
 
 " Tab handling shortcuts
 nn <C-Tab> :tabnext<CR>
@@ -34,21 +56,6 @@ nnoremap <leader>ep :vsplit ~/.vim/startup/plugins.vim<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>sm :source ~/.vim/startup/mappings.vim<cr>
 nnoremap <leader>ss :source ~/.vim/startup/settings.vim<cr>
-
-" toggle hlsearch
-nmap <silent> <F4> :set nohlsearch!<CR>
-imap <silent> <F4> <c-o>:set nohlsearch!<CR>
-
-nnoremap <F6> :call ToggleNumbering()<CR>
-nnoremap <F7> :call ToggleSyntax()<CR>
-
-
-" YouCompleteMe mappings
-nnoremap <F12> :YcmForceCompileAndDiagnostics<CR>
-nnoremap <leader>jd :YcmCompleter GoTo<CR>
-
-"Buffer exploration
-nnoremap <F10> :buffers<CR>:buffer<Space>
 
 "Nerd Tree
 nnoremap <leader>nt :NERDTreeToggle<cr>

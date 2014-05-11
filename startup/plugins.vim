@@ -11,9 +11,6 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Snippets
-"Plugin 'MarcWeber/vim-addon-mw-utils'
-"Plugin 'tomtom/tlib_vim'
-"Plugin 'garbas/vim-snipmate'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 " Trigger configuration. Do not use <tab>.
@@ -22,8 +19,17 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
 
+" Undo/Redo Tree
+Plugin 'sjl/gundo.vim'
+
 " Smarter '.'
 Plugin 'tpope/vim-repeat'
+
+" Explorer for buffers
+Plugin 'jlanzarotta/bufexplorer'
+
+" Automatic space alignment
+Plugin 'godlygeek/tabular'
 
 " <p>Surrond</p>
 Plugin 'tpope/vim-surround'
@@ -33,6 +39,8 @@ Plugin 'tpope/vim-fugitive'
 
 " Diff signs in gutter for Git index/working diffs
 Plugin 'airblade/vim-gitgutter'
+let g:gitgutter_realtime = 0
+let g:gitgutter_eager = 0
 
 " Git Exploration plugin
 Plugin 'gregsexton/gitv'
@@ -53,6 +61,7 @@ Plugin 'scrooloose/nerdcommenter'
 " Airline for pretty status/tab lines
 Plugin 'bling/vim-airline'
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#hunks#non_zero_only = 1 " git gutter
 if g:platform == "Linux" || g:platform == "SunOS"
     " Use Patched fonts on Linux and Sun
     let g:airline_powerline_fonts = 1
@@ -100,6 +109,13 @@ if g:platform == "Linux"
     " Nice airline-like bash prompt
     Plugin 'edkolev/promptline.vim'
 endif
+
+"" Stuff I want to try
+"Plugin 'tpope/vim-vinegar'
+"Plugin 'jiangmiao/auto-pairs'
+"Plugin 'xolox/vim-session'
+"Plugin 'junegunn/vim-easy-align'
+"Plugin 'rhysd/clever-f.vim'
 
 call vundle#end()
 filetype plugin indent on
