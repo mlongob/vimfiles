@@ -13,7 +13,6 @@ ino <right> <Nop>
 " Map jk to ESC for easy hand-positioning
 ino jk <esc>
 
-
 "" F-Keys Mapping
 " Toggle paste mode
 set pastetoggle=<F2>

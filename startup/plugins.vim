@@ -98,6 +98,9 @@ Plugin 'a.vim'
 " Easymotion for superquick motions
 Plugin 'Lokaltog/vim-easymotion'
 
+" Easy Ctag explorer
+Plugin 'majutsushi/tagbar'
+
 " Linux-Only plug-ins
 if g:platform == "Linux"
     " Autocompletion and semantic completion
