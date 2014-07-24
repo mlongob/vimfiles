@@ -18,24 +18,33 @@ ino jk <esc>
 set pastetoggle=<F2>
 
 " toggle hlsearch
-nmap <silent> <F4> :set nohlsearch!<CR>
-imap <silent> <F4> <c-o>:set nohlsearch!<CR>
-
-" Toggle Gundlo
-nnoremap <F5> :GundoToggle<CR>
-
-" Switch between conventional/relative numbering
-nnoremap <F6> :call ToggleNumbering()<CR>
+nmap <silent> <F3> :set nohlsearch!<CR>
+imap <silent> <F3> <c-o>:set nohlsearch!<CR>
 
 " Toggle Syintax Highlighting
-nnoremap <F7> :call ToggleSyntax()<CR>
+nnoremap <F4> :call ToggleSyntax()<CR>
 
-"Buffer exploration
-nnoremap <F10> :buffers<CR>:buffer<Space>
+" Switch between conventional/relative numbering
+nnoremap <F5> :call ToggleNumbering()<CR>
+
+" Expand Tab Toggle
+nn <F6> :set expandtab!<CR>
+
+" Toggle Gundlo
+nnoremap <F7> :GundoToggle<CR>
+
+" Toggle TabBar
+nnoremap <F8> :TagbarToggle<CR>
+
+" Toggle Gitgutter
+nnoremap <F9> :GitGutterToggle<CR>
 
 " YouCompleteMe mappings
 nnoremap <F12> :YcmForceCompileAndDiagnostics<CR>
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
+
+" Open Nerdtree in new tab
+nn <Leader>h :tabnew %:h<CR>
 
 " Tab handling shortcuts
 nn <C-Tab> :tabnext<CR>
@@ -44,8 +53,6 @@ no <C-S-Tab> :tabprevious<CR>
 no <C-Tab> :tabnext<CR>
 ino <C-S-Tab> <ESC>:tabprevious<CR>
 ino <C-Tab> <ESC>:tabnext<CR>
-nn <F8> :set expandtab!<CR>
-nn <Leader>h :tabnew %:h<CR>
 
 " Open and source .vimrc and startup scripts
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>

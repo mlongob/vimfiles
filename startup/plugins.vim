@@ -10,15 +10,6 @@ call vundle#begin()
 " Let Vundle manage itself
 Plugin 'gmarik/Vundle.vim'
 
-" Snippets
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-" Trigger configuration. Do not use <tab>.
-let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-let g:UltiSnipsEditSplit="vertical"
-
 " Undo/Redo Tree
 Plugin 'sjl/gundo.vim'
 
@@ -34,6 +25,15 @@ Plugin 'godlygeek/tabular'
 " <p>Surrond</p>
 Plugin 'tpope/vim-surround'
 
+" Ctrl A/X increase/descrease on steroids
+Plugin 'tpope/vim-speeddating'
+
+" [ and ] mappings on steroids
+Plugin 'tpope/vim-unimpaired'
+
+" Dipatch build/test
+Plugin 'tpope/vim-dispatch'
+
 " Fugitive Git Wrapper
 Plugin 'tpope/vim-fugitive'
 
@@ -41,6 +41,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
+let g:gitgutter_max_signs = 1000
 
 " Git Exploration plugin
 Plugin 'gregsexton/gitv'
@@ -84,10 +85,13 @@ Plugin 'flazz/vim-colorschemes'
 
 " Syntax checking
 Plugin 'scrooloose/syntastic'
-let g:syntastic_error_symbol = '✗✗'
-let g:syntastic_style_error_symbol = '✠✠'
-let g:syntastic_warning_symbol = '∆∆'
-let g:syntastic_style_warning_symbol = '≈≈'
+
+if g:platform != "AIX"
+    let g:syntastic_error_symbol = '✗✗'
+    let g:syntastic_style_error_symbol = '✠✠'
+    let g:syntastic_warning_symbol = '∆∆'
+    let g:syntastic_style_warning_symbol = '≈≈'
+endif
 
 " ListToggle for display of quickfix/location list
 Plugin 'Valloric/ListToggle'
@@ -110,6 +114,7 @@ if g:platform == "Linux"
     let g:ycm_path_to_python_interpreter = '/opt/swt/bin/python'
     let g:ycm_autoclose_preview_window_after_insertion = 1
     let g:ycm_always_populate_location_list = 1
+    let g:ycm_filetype_specific_completion_to_disable = { 'c': 0, 'cpp': 0 }
 
     " Show Location list output in airline
     Plugin 'asenac/vim-airline-loclist'
@@ -119,6 +124,14 @@ if g:platform == "Linux"
     Plugin 'edkolev/promptline.vim'
     let g:promptline_theme = 'airline'
 
+    " Snippets
+    Plugin 'SirVer/ultisnips'
+    Plugin 'honza/vim-snippets'
+    " Trigger configuration. Do not use <tab>.
+    let g:UltiSnipsExpandTrigger="<c-j>"
+    let g:UltiSnipsJumpForwardTrigger="<c-b>"
+    let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+    let g:UltiSnipsEditSplit="vertical"
 endif
 
 "" Stuff I want to try
