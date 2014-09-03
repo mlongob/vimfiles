@@ -37,6 +37,17 @@ Plugin 'tpope/vim-dispatch'
 " Fugitive Git Wrapper
 Plugin 'tpope/vim-fugitive'
 
+" Phabricator Arcanist Wrapper
+Plugin 'phleet/vim-arcanist'
+
+" Clang format for C/C++/ObjC
+"Plugin 'kana/vim-operator-user'
+"Plugin 'rhysd/vim-clang-format'
+" map to <Leader>cf in C++ code
+"autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
+"autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
+"autocmd FileType c,cpp,objc map <buffer><Leader>x <Plug>(operator-clang-format)
+
 " Diff signs in gutter for Git index/working diffs
 Plugin 'airblade/vim-gitgutter'
 let g:gitgutter_realtime = 0

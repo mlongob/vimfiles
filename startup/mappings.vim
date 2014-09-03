@@ -65,3 +65,7 @@ nnoremap <leader>ss :source ~/.vim/startup/settings.vim<cr>
 
 "Nerd Tree
 nnoremap <leader>nt :NERDTreeToggle<cr>
+
+" Clang format wrapper
+map <C-k> :pyf ~/bin/clang-format.py<CR>
+imap <C-k> <ESC>:pyf ~/bin/clang-format.py<CR>i
