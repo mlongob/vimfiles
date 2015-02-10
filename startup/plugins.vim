@@ -37,8 +37,15 @@ Plugin 'tpope/vim-dispatch'
 " Fugitive Git Wrapper
 Plugin 'tpope/vim-fugitive'
 
+" Set directory to vim root
+Plugin 'airblade/vim-rooter'
+
 " Phabricator Arcanist Wrapper
 Plugin 'phleet/vim-arcanist'
+
+" Doxygen comments
+Plugin 'DoxygenToolkit.vim'
+let g:DoxygenToolkit_authorName="Mario Longobardi <mlongobardi2@bloomberg.net>"
 
 " Clang format for C/C++/ObjC
 "Plugin 'kana/vim-operator-user'
@@ -66,7 +73,6 @@ let NERDTreeShowBookmarks=1
 
 " ctrlP Plugin
 Plugin 'kien/ctrlp.vim'
-let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
   \ 'file': '\v\.(exe|so|dll)$',
@@ -116,6 +122,9 @@ Plugin 'Lokaltog/vim-easymotion'
 " Easy Ctag explorer
 Plugin 'majutsushi/tagbar'
 
+" Tmux movement mappings
+Plugin 'christoomey/vim-tmux-navigator'
+
 " Linux-Only plug-ins
 if g:platform == "Linux"
     " Autocompletion and semantic completion
@@ -134,6 +143,9 @@ if g:platform == "Linux"
     " Nice airline-like bash prompt
     Plugin 'edkolev/promptline.vim'
     let g:promptline_theme = 'airline'
+
+    " Nice airline-like tmux prompt
+    "Plugin 'edkolev/tmuxline.vim'
 
     " Snippets
     Plugin 'SirVer/ultisnips'

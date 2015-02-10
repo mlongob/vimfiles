@@ -67,5 +67,9 @@ nnoremap <leader>ss :source ~/.vim/startup/settings.vim<cr>
 nnoremap <leader>nt :NERDTreeToggle<cr>
 
 " Clang format wrapper
-map <C-k> :pyf ~/bin/clang-format.py<CR>
-imap <C-k> <ESC>:pyf ~/bin/clang-format.py<CR>i
+map <leader>cf :pyf ~/bin/clang-format.py<CR>
+imap <leader>cf <ESC>:pyf ~/bin/clang-format.py<CR>i
+
+" Paste with shift+ins
+map <S-Insert> <MiddleMouse>
+map! <S-Insert> <MiddleMouse>
