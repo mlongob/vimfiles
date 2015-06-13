@@ -33,6 +33,7 @@ Plugin 'tpope/vim-unimpaired'
 
 " Dipatch build/test
 Plugin 'tpope/vim-dispatch'
+set makeprg=toolkit-remote\ nylxdev2\ gmake\ -j
 
 " Fugitive Git Wrapper
 Plugin 'tpope/vim-fugitive'
@@ -131,10 +132,9 @@ if g:platform == "Linux"
     Plugin 'Valloric/YouCompleteMe'
     "let g:ycm_server_log_level = 'debug'
     let g:ycm_confirm_extra_conf = 0
-    let g:ycm_path_to_python_interpreter = '/opt/swt/bin/python'
     let g:ycm_autoclose_preview_window_after_insertion = 1
     let g:ycm_always_populate_location_list = 1
-    let g:ycm_filetype_specific_completion_to_disable = { 'c': 0, 'cpp': 0 }
+    let g:ycm_global_ycm_extra_conf = '~/.ycm_default_conf.py'
 
     " Show Location list output in airline
     Plugin 'asenac/vim-airline-loclist'

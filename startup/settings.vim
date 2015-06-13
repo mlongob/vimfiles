@@ -126,7 +126,7 @@ set gdefault
 if has('gui_running')
     set guioptions=acimg
     if g:platform == "Linux" || g:platform == "SunOS"
-        set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 13
+        set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
     endif
 endif
 
