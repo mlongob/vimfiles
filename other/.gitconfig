@@ -1,0 +1,52 @@
+[user]
+	name = Mario Longobardi
+	email = mlongobardi2@bloomberg.net
+[diff]
+	tool = tkdiff
+[difftool]
+	prompt = false
+[http]
+	proxy = proxy.bloomberg.com:81
+	sslVerify = false
+[color]
+	ui = true
+	status = true
+	branch = true
+	diff = true
+[alias]
+	lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) -%C(bold red) %an%C(reset)'
+	lga = "!git lg --all"
+	lg2 = log --decorate --oneline --graph --branches --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold blue)(%ar) %C(bold yellow)%d%C(reset) %C(green)%s%C(reset) %C(dim green)- %an%C(reset)'
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cgreen\\ [%an]" --decorate
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cgreen\\ [%an]" --decorate --name-status
+	ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cgreen\\ [%an]" --decorate --date=relative
+	le = log --oneline --decorate
+	last = log -1 --pretty=%B
+	unstage = reset HEAD --
+	amend = commit --amend --no-edit
+	co = checkout
+	cob = checkout -b
+	br = branch
+	bra = branch -vv
+	ci = commit
+	st = status
+	f = "!git ls-files | grep"
+	gr = grep -Ii
+	sed = "!git ls-files | xargs sed -i"
+	la = "!git config -l | grep alias | cut -c 7-"
+	srb = svn rebase
+[mergetool "fugitive"]
+	cmd = vim -f -c \"Gvdiff\" \"$MERGED\"
+[mergetool "gfugitive"]
+	cmd = gvim -f -c \"Gvdiff\" \"$MERGED\"
+[merge]
+	tool = gfugitive
+[core]
+	preloadindex = true
+	pager = less -R -n
+[pager]
+	status = true
+[pull]
+	rebase = true
+[push]
+	default = simple
